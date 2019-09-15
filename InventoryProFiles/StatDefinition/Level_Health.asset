@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce38bc8f61579041b751c97bf0ac3f0, type: 3}
+  m_Name: Level_Health
+  m_EditorClassIdentifier: 
+  ID: 0
+  _enabled: 1
+  _statName: Health
+  _category: Level
+  _showInUI: 1
+  _uiPrefab: {fileID: 11438680, guid: daab7375d65094f419fbf9574c539450, type: 3}
+  _valueStringFormat: '{0}'
+  _color: {r: 1, g: 1, b: 1, a: 1}
+  _icon: {fileID: 0}
+  _baseValue: 100
+  _maxValue: 100
+  _startLevel: 1
+  _autoProgressLevels: 0
+  _levels:
+  - maxValue: 100
+    experienceRequired: 1
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 100
+    experienceRequired: 2
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 120
+    experienceRequired: 4
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 140
+    experienceRequired: 5
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 160
+    experienceRequired: 6
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 180
+    experienceRequired: 7
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 200
+    experienceRequired: 8
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 225
+    experienceRequired: 9
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 250
+    experienceRequired: 10
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 275
+    experienceRequired: 11
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 300
+    experienceRequired: 12
+    effectOnUnlock: {fileID: 0}

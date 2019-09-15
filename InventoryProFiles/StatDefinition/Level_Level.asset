@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce38bc8f61579041b751c97bf0ac3f0, type: 3}
+  m_Name: Level_Level
+  m_EditorClassIdentifier: 
+  ID: 1
+  _enabled: 1
+  _statName: Level
+  _category: Level
+  _showInUI: 1
+  _uiPrefab: {fileID: 11438680, guid: daab7375d65094f419fbf9574c539450, type: 3}
+  _valueStringFormat: '{2} {0} - {5} XP to Next Level'
+  _color: {r: 1, g: 1, b: 1, a: 1}
+  _icon: {fileID: 0}
+  _baseValue: 1
+  _maxValue: 1
+  _startLevel: 1
+  _autoProgressLevels: 1
+  _levels:
+  - maxValue: 1
+    experienceRequired: 180
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 2
+    experienceRequired: 180
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 3
+    experienceRequired: 300
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 4
+    experienceRequired: 450
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 5
+    experienceRequired: 660
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 6
+    experienceRequired: 930
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 7
+    experienceRequired: 1260
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 8
+    experienceRequired: 1650
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 9
+    experienceRequired: 2100
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 10
+    experienceRequired: 2600
+    effectOnUnlock: {fileID: 0}
+  - maxValue: 11
+    experienceRequired: 3200
+    effectOnUnlock: {fileID: 0}
