@@ -64,6 +64,7 @@ public class EnemyHealthController : MonoBehaviour
         {
             if (!xpAwarded)
             {
+               // GameObject.FindGameObjectWithTag("SceneTransitioner").GetComponent<EnemySpawner>().DecreaseEnemyCount();
                 float enemyXpVal = XpToAward();
                 GameObject.FindGameObjectWithTag("PlayerController").GetComponent<PlayerStatsManager>().GainExperience(enemyXpVal);
                 xpAwarded = true;
