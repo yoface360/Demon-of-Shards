@@ -8,21 +8,24 @@ public class LevelManager : MonoBehaviour
     int curBuildInd, bossBuildInd, firstLevelBuildInd;
     int titleBuildInd = 0;
     List<int> possibleLevels = new List<int>();
+    GameObject timer;
     // Start is called before the first frame update
     void Start()
     {
+        timer = GameObject.Find("Timer Panel");
         curBuildInd = SceneManager.GetActiveScene().buildIndex;
         Debug.Log(curBuildInd);
         bossBuildInd = curBuildInd + 1;
         firstLevelBuildInd = titleBuildInd + 2;
         Debug.Log(firstLevelBuildInd + " " + titleBuildInd + " " + curBuildInd);
         DetermineLevels();
+        timer.GetComponent<CountdownScript>().StopTimer();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -52,7 +55,7 @@ public class LevelManager : MonoBehaviour
     void DetermineLevels()
     {
         int j = firstLevelBuildInd;
-       for (int i = j; i < curBuildInd; i++)
+        for (int i = j; i < curBuildInd; i++)
         {
             possibleLevels.Add(i);
             Debug.Log("Build Index: " + i + " Scene Name: " + SceneManager.GetSceneByBuildIndex(i).name);
@@ -63,6 +66,7 @@ public class LevelManager : MonoBehaviour
     {
         int levelToChange = DetermineNextLevel();
         Debug.Log(levelToChange);
+        timer.GetComponent<CountdownScript>().ResumeTimer();
         SceneManager.LoadScene(levelToChange);
     }
 }

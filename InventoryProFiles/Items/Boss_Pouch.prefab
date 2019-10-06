@@ -257,10 +257,9 @@ GameObject:
   - component: {fileID: 4788416880629854200}
   - component: {fileID: 3852090982039757165}
   - component: {fileID: 7686708748477027872}
-  - component: {fileID: 7112870724870752079}
   - component: {fileID: 1654557383365825156}
   m_Layer: 0
-  m_Name: Dropped_Items_Pouch
+  m_Name: Boss_Pouch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -393,98 +392,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0c1edd2cb3f2c9409ece71a5499dcbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _uniqueName: 
+  _uniqueName: Boss Pouch
   _items: []
   currencies: []
   _destroyWhenEmpty: 1
---- !u!114 &7112870724870752079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4788416880633415622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05d341b194f740b4aa2076e8051bccf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filterGroups:
-  - filters:
-    - restrictionType: 2
-      filterType: 0
-      categoryValue: {fileID: 11400000, guid: 9e97bf31cc9ee61469c6b5186a0576a3, type: 2}
-      statDefinitionValue: {fileID: 0}
-      rarityValue: {fileID: 11400000, guid: f29835e0506e7ca4fbd6892d759beb83, type: 2}
-      stringValue: 
-      boolValue: 0
-      floatValue: 0
-    - restrictionType: 0
-      filterType: 0
-      categoryValue: {fileID: 11400000, guid: 9e97bf31cc9ee61469c6b5186a0576a3, type: 2}
-      statDefinitionValue: {fileID: 0}
-      rarityValue: {fileID: 11400000, guid: f29835e0506e7ca4fbd6892d759beb83, type: 2}
-      stringValue: Devdog.InventoryPro.ConsumableInventoryItem, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      boolValue: 0
-      floatValue: 0
-    matchType: 0
-    minAmount: 1
-    maxAmount: 2
-    minStackSize: 1
-    maxStackSize: 2
-    itemsChanceFactor: 0.5
-  - filters:
-    - restrictionType: 2
-      filterType: 0
-      categoryValue: {fileID: 11400000, guid: 9e97bf31cc9ee61469c6b5186a0576a3, type: 2}
-      statDefinitionValue: {fileID: 0}
-      rarityValue: {fileID: 11400000, guid: 94d877437e6b29841834a75acf82a389, type: 2}
-      stringValue: 
-      boolValue: 0
-      floatValue: 0
-    - restrictionType: 0
-      filterType: 0
-      categoryValue: {fileID: 11400000, guid: 9e97bf31cc9ee61469c6b5186a0576a3, type: 2}
-      statDefinitionValue: {fileID: 0}
-      rarityValue: {fileID: 11400000, guid: 94d877437e6b29841834a75acf82a389, type: 2}
-      stringValue: Devdog.InventoryPro.ConsumableInventoryItem, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      boolValue: 0
-      floatValue: 0
-    matchType: 0
-    minAmount: 1
-    maxAmount: 1
-    minStackSize: 1
-    maxStackSize: 1
-    itemsChanceFactor: 0.125
-  - filters:
-    - restrictionType: 2
-      filterType: 0
-      categoryValue: {fileID: 11400000, guid: 9e97bf31cc9ee61469c6b5186a0576a3, type: 2}
-      statDefinitionValue: {fileID: 0}
-      rarityValue: {fileID: 11400000, guid: 6bd30b2d20e1d0b418a5934b6cf367b9, type: 2}
-      stringValue: 
-      boolValue: 0
-      floatValue: 0
-    - restrictionType: 0
-      filterType: 0
-      categoryValue: {fileID: 11400000, guid: 9e97bf31cc9ee61469c6b5186a0576a3, type: 2}
-      statDefinitionValue: {fileID: 0}
-      rarityValue: {fileID: 11400000, guid: 94d877437e6b29841834a75acf82a389, type: 2}
-      stringValue: Devdog.InventoryPro.ConsumableInventoryItem, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      boolValue: 0
-      floatValue: 0
-    matchType: 0
-    minAmount: 1
-    maxAmount: 1
-    minStackSize: 1
-    maxStackSize: 1
-    itemsChanceFactor: 0.05
-  generateAtGameStart: 1
-  minAmountTotal: 1
-  maxAmountTotal: 4
 --- !u!114 &1654557383365825156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,7 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerMouseClick: 1
-  _triggerKeyCode: 102
+  _triggerKeyCode: 0
   useCursorIcon: 1
   _cursorIcon:
     texture: {fileID: 0}

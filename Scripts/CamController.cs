@@ -26,6 +26,7 @@ public class CamController : MonoBehaviour
         //Setup offset between character and camera
         initRot = transform.localRotation;
         offset = transform.position - player.transform.position;
+        //UpdateOffset();
     }
 
     void LateUpdate()
@@ -41,5 +42,10 @@ public class CamController : MonoBehaviour
         transform.position = player.transform.position + offset;
         //Looks at player, if it was rotated in this sceen
         transform.LookAt(test, Vector3.up);
+    }
+
+    public void UpdateOffset()
+    {
+        offset = transform.position - player.transform.position;
     }
 }

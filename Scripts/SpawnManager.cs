@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField]
     GameObject player;
+    GameObject camera;
     Transform respawn;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        camera = GameObject.FindGameObjectWithTag("MainCamera");
         SceneManager.sceneLoaded += OnSceneLoaded;   
     }
 
@@ -21,10 +23,20 @@ public class SpawnManager : MonoBehaviour
     }
     void OnSceneLoaded(Scene sc, LoadSceneMode md)
     {
-       respawn = GameObject.FindGameObjectWithTag("Respawn").transform;
-        player.transform.position = respawn.transform.position;
-        player.transform.rotation = respawn.transform.rotation;
-        player.SendMessageUpwards("ChangeRespawnPoint", respawn.gameObject);
+        if (sc.name != "Main Menu Scene")
+        {
+            if (player == null)
+            {
+                player = GameObject.FindGameObjectWithTag("Player");
+                camera = GameObject.FindGameObjectWithTag("MainCamera");
+            }
+            respawn = GameObject.FindGameObjectWithTag("Respawn").transform;
+            player.transform.position = respawn.transform.position;
+            player.transform.rotation = respawn.transform.rotation;
+            player.SendMessageUpwards("ChangeRespawnPoint", respawn.gameObject);
+            //camera.GetComponent<CamController>().UpdateOffset();
+
+        }
     }
     
 

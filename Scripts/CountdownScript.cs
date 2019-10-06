@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Devdog.General;
 
 public class CountdownScript : MonoBehaviour
 {
     [SerializeField]
     private Text displayText;
-    private float totalTime = 300;
+    private float curTime;
+    float maxTime = 300f;
+    bool inBossRoom = false;
+    bool timerRunning = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        curTime = maxTime;
         StartTimer();
     }
 
@@ -27,16 +32,45 @@ public class CountdownScript : MonoBehaviour
 
     void UpdateTimer()
     {
-        if (displayText != null)
+        if (timerRunning)
         {
-            totalTime -= Time.deltaTime;
-            string minutes = Mathf.Floor(totalTime / 60).ToString("00");
-            string seconds = Mathf.Floor(totalTime % 60).ToString("00");
-            displayText.text = "Time Left: " + minutes + ":" + seconds;
-            if (totalTime <= 0.0f)
+            if (displayText != null)
             {
-                SceneManager.LoadScene("Main Menu Scene");
+                curTime -= Time.deltaTime;
+                string minutes = Mathf.Floor(curTime / 60).ToString("00");
+                string seconds = Mathf.Floor(curTime % 60).ToString("00");
+                displayText.text = "Time Left: " + minutes + ":" + seconds;
+                if (curTime <= 0.0f)
+                {
+                    if (!inBossRoom)
+                    {
+                        SceneManager.LoadScene("Test Final Level");
+                        curTime = maxTime;
+                        inBossRoom = true;
+                    }
+                    else
+                    {
+                        ReturnToMainMenu();
+                    }
+                }
             }
         }
+    }
+    void ReturnToMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu Scene");
+        DontDestroyOnLoadManager.DestroyAllDoNotDestroyItems();
+    }
+    public void StopTimer()
+    {
+        timerRunning = false;
+    }
+    public void ResumeTimer()
+    {
+        timerRunning = true;
+    }
+    public void AddSeconds(float amount)
+    {
+        curTime += amount;
     }
 }
